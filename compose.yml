@@ -1,6 +1,7 @@
 networks:
   pulsar:
     driver: bridge
+    name: pulsarnetwork
 services:
   # Start zookeeper
   zookeeper:
