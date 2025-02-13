@@ -28,7 +28,16 @@ Check logs to ensure Pulsar is running:
 docker compose -f compose.yml logs | grep -i "PulsarService started"
 docker compose -f compose.yml ps
 ```
-### Cleanup and remove Pulsar in DOcker
+### Cleanup and remove Pulsar in Docker
 ```bash
 docker compose -f compose.yml down
 ```
+
+# AI Chat prompts 
+Claude Sonnet 3.5 was used to create "compose.yml" and self-signed CERTS script.  The prompt text used:
+```
+You are an expert in Apache Pulsar, and an expert in TLS encrypted TCP connections. 
+Use Docker Compose to create a Pulsar cluster with TLS enabled between the broker and clients.
+The docker compose conf file should create a cluster with 1 Zookeeper, 1 Bookie, and 1 Broker as an example running cluster.
+```
+Results from Claude created the compose.yml and generate-certs.sh script files.
